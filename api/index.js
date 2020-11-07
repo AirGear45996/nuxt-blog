@@ -21,13 +21,14 @@ passport.use(passportStrategy);
 //endregion
 
 //region routes
+app.use('/'     , require('./routes/index.router')    );
 app.use('/api/auth'     , require('./routes/auth.router')    );
 app.use('/api/post'     , require('./routes/post.router')    );
 app.use('/api/comment'  , require('./routes/comment.router') );
 //endregion
 
 const config = require('./config');
-const port = 8000;
+const port = 8000; //process.env.PORT || 8000;
 async function start() {
     try {
         await mongoose.connect(config.mongodb_url, {

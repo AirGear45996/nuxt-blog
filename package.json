@@ -3,19 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-
-    "dev": "concurrently \"nuxt\" \"npm run api-dev\"",
+    "dev": "concurrently \"nuxt\" \"npm run api\"",
     "build": "nuxt build",
-    "start": "concurrently \"nuxt start\" \"npm run api-dev\"",
+    "start": "concurrently \"nuxt start\" \"npm run api\"",
     "generate": "nuxt generate",
-
-    "api-dev": "cd backend && npm run dev",
-
-    "heroku-postbuild": "npm run build"
-
-  },
-  "engines": {
-    "node": "10.x"
+    "api": "cd api && npm run dev",
+    "deploy": "git pull && npm i && npm run build && npm run start"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",

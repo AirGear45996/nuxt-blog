@@ -14,6 +14,7 @@ export default {
   async asyncData({store}) {
     const posts = await store.dispatch('post/fetch');
     return {posts};
+
   }
 }
 </script>

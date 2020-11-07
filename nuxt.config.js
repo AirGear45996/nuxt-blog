@@ -48,12 +48,11 @@ export default {
   build: { // Build Configuration (https://go.nuxtjs.dev/config-build)
     transpile: [/^element-ui/],
   },
-
   env: {
     appName: 'SSR Blog'
   },
   axios: { // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-    baseURL: process.env.BASE_URL || "http://localhost:8000",
+    baseURL: "http://localhost:8000", // process.env.BACKEND_URL
   },
   /*pwa: {
     workbox: {
