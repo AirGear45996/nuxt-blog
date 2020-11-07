@@ -90,4 +90,4 @@ sw.*
 # Vim swap files
 *.swp
 
-backend/config/config.dev.js
+api/config/config.dev.js
